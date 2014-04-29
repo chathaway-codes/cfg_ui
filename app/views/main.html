@@ -1,16 +1,9 @@
 <div class="content">
     <h1>History of the Union Jack and Flags of the Empire<br><small>by Barlow Cumberland</small></h1>
-    <div class="left-column">
-        <h1>Left</h1>
-    </div><!-- /.left-column -->
-    
     <div class="center-column">
         <div class="context">
             <p>
-                <span class="blurred"><a id="sentence1" ng-click="click('#sentence1')">It was under this red cross banner of St. George that Richard I., the Lion-hearted, after proving their seamanship in victory and giving his men their battle-cry, "Saint George—forward!" showed the mettle of his English Crusaders in the battles of the Holy Land, and led them to the walls of Jerusalem.</a></span>
-                <span class="unblurred">With it the fleets of Edward I. claimed and maintained the "lordship of the Narrow Seas."</span>
-                <span class="blurred"><a>Under this single red cross flag the ships of England won the epochal naval victory of Sluys, where the English bowman shot his feathered shafts from shipboard as blithely as when afterwards on land the French battlefields resounded to the cry of "England and St. George," when the undying glories of Cressy and Poictiers were achieved, and again at Agincourt when Henry V. led on his men to victory.</a></span>
-                <span class="blurred"><a>Under it, too, Cabot discovered Cape Breton, Drake sailed around the world, Frobisher sought the Northwest passage, Raleigh founded Virginia, and the navy of Elizabeth carried confusion into the ill-fated Spanish Armada.</a></span>
+                <span ng-repeat="sentence in sentences" ng:class="{true:'unblurred',false:'blurred'}[sentence.visible]"><a id="sentence{{ sentence.id }}" ng-click="click('#sentence'+sentence.id, sentence.id)">{{ sentence.content }}</a></span>
             </p>
         </div><!-- /.context -->
         <div class="guess">
