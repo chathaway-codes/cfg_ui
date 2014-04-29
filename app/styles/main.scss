@@ -1,0 +1,91 @@
+$icon-font-path: "/bower_components/bootstrap-sass-official/vendor/assets/fonts/bootstrap/";
+
+@import 'bootstrap-sass-official/vendor/assets/stylesheets/bootstrap';
+
+// bower:scss
+@import "../bower_components/bootstrap-sass-official/vendor/assets/stylesheets/bootstrap.scss";
+// endbower
+
+.content {
+    @include make-row();
+    .left-column {
+        color: red;
+        @include make-lg-column(2);
+    }
+
+    .center-column {
+        @include make-lg-column(8);
+    }
+
+    .right-column {
+        @include make-lg-column(2);
+    }
+}
+
+.actions {
+    @include make-row();
+
+    margin-top: 10px;
+
+    .skip-button {
+        @include make-lg-column(6);
+    }
+
+    .guess-button {
+        @include make-lg-column(6);
+    }
+}
+
+.monies-panel {
+    @extend .panel;
+}
+
+.context {
+    @extend .well;
+
+    p {
+        padding: 10px;
+        .blurred {
+            text-shadow: 0 0 8px #000;
+            color: rgba(255,255,255,0);
+        }
+        .unblurred {
+            text-shadow: none; 
+            color: #000; 
+            filter: none;
+        }
+        .popover {
+            @extend .unblurred;
+        }
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+        a:hover {
+            background-color: gray;
+        }
+    }
+}
+
+/* Responsive: Portrait tablets and up */
+@media screen and (min-width: 1024px) {
+    .container {
+        max-width: 1000px;
+    }
+
+    /* Remove the padding we set earlier */
+    .header,
+    .marketing,
+    .footer {
+        padding-left: 0;
+        padding-right: 0;
+    }
+    /* Space out the masthead */
+    .header {
+        margin-bottom: 30px;
+    }
+    /* Remove the bottom border on the jumbotron for visual effect */
+    .jumbotron {
+        border-bottom: 0;
+    }
+}
