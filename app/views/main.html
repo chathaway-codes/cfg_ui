@@ -1,9 +1,9 @@
 <div class="content">
-    <h1>History of the Union Jack and Flags of the Empire<br><small>by Barlow Cumberland</small></h1>
+    <h1>{{ context.book.title }}<br><small>by {{ context.book.author }}</small></h1>
     <div class="center-column">
         <div class="context">
             <p>
-                <span ng-repeat="sentence in sentences" ng:class="{true:'unblurred',false:'blurred'}[sentence.visible]"><a id="sentence{{ sentence.id }}" ng-click="click('#sentence'+sentence.id, sentence.id)">{{ sentence.content }}</a></span>
+                <span ng-repeat="sentence in context.sentences" ng:class="{true:'unblurred',false:'blurred'}[sentence.visible]"><a id="sentence{{ sentence.sentence.id }}" ng-click="click('#sentence'+sentence.sentence.id, sentence.sentence.id)">{{ sentence.sentence.content }}</a></span>
             </p>
         </div><!-- /.context -->
         <div class="guess">
