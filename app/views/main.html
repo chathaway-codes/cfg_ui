@@ -21,11 +21,11 @@
     
     <div class="right-column">
         <div class="monies-panel">
-            <h2>My info</h2>
-            <h3>{{ monies }} monies</h3>
-            <h3>2970 points</h3>
-            <h3>29 friends</h3>
-            <h3>50 reviews</h3>
+            <h2>Hello, {{ user.name }}</h2>
+            <h3>{{ user.monies }} monies</h3>
+            <h3>{{ user.score }} points</h3>
+            <h3>{{ user.reviewCount }} reviews</h3>
+            <h3>{{ user.guessCount }} guesses</h3>
         </div><!-- /.monies-panel -->
     </div><!-- /.right-column -->
 </div><!-- /.content -->

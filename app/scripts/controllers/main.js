@@ -1,10 +1,10 @@
 'use strict';
 
 angular.module('cfgUiApp')
-  .controller('MainCtrl', function ($scope, $compile, Context) {
+  .controller('MainCtrl', function ($scope, $compile, Context, User) {
     var $ = window.$;
-    $scope.monies = 500;
 
+    $scope.user = User.get();
     $scope.context = Context.new();
     console.log($scope.context);
 
@@ -20,7 +20,7 @@ angular.module('cfgUiApp')
     $scope.buy = function(item, id) {
         var sentence = findSentence(id);
         sentence.visible = true;
-        $scope.monies -= sentence.cost;
+        $scope.user.monies -= sentence.cost;
         $(item).popover('disable');
       };
 
