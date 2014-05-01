@@ -14,6 +14,10 @@ angular
         templateUrl: 'views/main.html',
         controller: 'MainCtrl'
       })
+      .when('/review', {
+        templateUrl: 'views/review.html',
+        controller: 'ReviewCtrl'
+      })
       .otherwise({
         redirectTo: '/'
       });

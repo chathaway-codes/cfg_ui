@@ -3,7 +3,7 @@
     <div class="center-column">
         <div class="context">
             <p>
-                <span ng-repeat="sentence in context.sentences" ng:class="{true:'unblurred',false:'blurred'}[sentence.visible]"><a id="sentence{{ sentence.sentence.id }}" ng-click="click('#sentence'+sentence.sentence.id, sentence.sentence.id)">{{ sentence.sentence.content }}</a></span>
+                <span ng-repeat="sentence in context.sentences" ng:class="{true:'unblurred',false:'blurred'}[sentence.visible]"><a ng-click="click('#sentence'+sentence.sentence.id, sentence.sentence.id)" class="sentence{{ sentence.sentence.id }}" id="sentence{{ sentence.sentence.id }}">{{ sentence.sentence.content }}</a></span>
             </p>
         </div><!-- /.context -->
         <div class="guess">
@@ -26,6 +26,7 @@
             <h3>{{ user.score }} points</h3>
             <h3>{{ user.reviewCount }} reviews</h3>
             <h3>{{ user.guessCount }} guesses</h3>
+            <button class="btn btn-primary" ng-click="makeReview()">Review something</button>
         </div><!-- /.monies-panel -->
     </div><!-- /.right-column -->
 </div><!-- /.content -->
