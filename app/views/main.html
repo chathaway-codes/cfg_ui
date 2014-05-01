@@ -7,14 +7,14 @@
             </p>
         </div><!-- /.context -->
         <div class="guess">
-            <textarea class="form-control" rows=3 placeholder="Your guess..."></textarea>
+            <textarea ng-model="guess" class="form-control" rows=3 placeholder="Your guess..."></textarea>
         </div><!-- /.guess -->
         <div class="actions">
             <div class="skip-button">
-                <button type="button" class="btn btn-default btn-lg">Skip</button>
+                <button type="button" class="btn btn-default btn-lg" ng-click="next()">Skip</button>
             </div>
             <div class="guess-button">
-                <button type="button" class="btn btn-primary btn-lg pull-right">Make guess</button>
+                <button type="button" class="btn btn-primary btn-lg pull-right" ng-click="makeGuess()">Make guess</button>
             </div>
         </div><!-- /.actions -->
     </div><!-- /.center-column -->
