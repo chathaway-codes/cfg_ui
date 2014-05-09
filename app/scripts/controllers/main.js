@@ -39,7 +39,7 @@ angular.module('cfgUiApp')
     $scope.buy = function(item, id) {
         var sentence = findSentence(id);
         sentence.$update(null, function(httpResponse) {
-            console.log(httpResponse);
+            $scope.user.monies -= sentence.cost;
             $(item).popover('hide');
             $(item).popover('disable');
           }, function(httpResponse) {
